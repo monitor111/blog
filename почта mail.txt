@@ -1,0 +1,7 @@
+https://mailtrap.io/inboxes/3438369/messages
+
+Это сайт на катором появляются пользователи , - читатели (не админ) ,
+ и генерятся их пароль , что бы зайти под их именем.
+ Вот ссылка на видеоурок 
+
+ https://www.youtube.com/watch?v=sGY35rfCSbA&list=PLd2_Os8Cj3t8StX6GztbdMIUXmgPuingB&index=28

@@ -1,0 +1,3 @@
+По этому адресу , в этом проекте - закоментирован код для восстановления поля каторое удалили --- кзакомментируем основной код , этот раскоммент. и - меняем id
+
+C:\OSPanel\domains\blog\app\Http\Controllers\Admin\Category\IndexController.php
