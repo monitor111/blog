@@ -54,6 +54,11 @@ Route::group(['namespace' => 'Main'], function() {
 Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function() {
     Route::get('/', [PostIndexController::class, '__invoke'])->name('post.index');  // Или MainIndexController, если хотите использовать его
     Route::get('/{post}', [ShowController::class, '__invoke'])->name('post.show');
+
+// post/10/comments
+    Route::group(['namespace' => 'Comment', 'prefix' => '{post}/comments'], function() {
+        Route::post('/', [App\Http\Controllers\Post\Comment\StoreController::class, '__invoke'])->name('post.comment.store');
+    });
 });
 
 Auth::routes(['verify' => true]);
