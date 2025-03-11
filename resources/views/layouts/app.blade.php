@@ -9,12 +9,18 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
+
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
     <link href="https://fonts.bunny.net/css?family=Nunito" rel="stylesheet">
 
     <!-- Scripts -->
     @vite(['resources/sass/app.scss', 'resources/js/app.js'])
+
+
+    {{-- <link href="{{ mix('css/app.css') }}" rel="stylesheet"> --}}
+    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}">
+
 </head>
 <body>
     <div id="app">

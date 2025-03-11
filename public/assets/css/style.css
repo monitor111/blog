@@ -1,3 +1,5 @@
+@import url('https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css');
+
 @import url("https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap");
 /*!
  * Bootstrap v4.4.1 (https://getbootstrap.com/)
@@ -5,6 +7,12 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+
+ /* body {
+  background-color: red!important;
+} */
+
+
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -219,7 +227,9 @@ button,
 [type="button"],
 [type="reset"],
 [type="submit"] {
-  -webkit-appearance: button; }
+  -webkit-appearance: button;  /* для Safari и Chrome */
+  -moz-appearance: button;     /* для Firefox */
+    appearance: button;    }
 
 button:not(:disabled),
 [type="button"]:not(:disabled),
@@ -243,7 +253,9 @@ input[type="date"],
 input[type="time"],
 input[type="datetime-local"],
 input[type="month"] {
-  -webkit-appearance: listbox; }
+  -webkit-appearance: none;  /* для Safari и Chrome */
+  -moz-appearance: none;     /* для Firefox */
+  appearance: none;  }
 
 textarea {
   overflow: auto;
@@ -275,7 +287,9 @@ progress {
 
 [type="search"] {
   outline-offset: -2px;
-  -webkit-appearance: none; }
+  -webkit-appearance: none;  /* для Safari и Chrome */
+  -moz-appearance: none;     /* для Firefox */
+  appearance: none;  }
 
 [type="search"]::-webkit-search-decoration {
   -webkit-appearance: none; }

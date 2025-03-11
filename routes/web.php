@@ -59,6 +59,10 @@ Route::group(['namespace' => 'Post', 'prefix' => 'posts'], function() {
     Route::group(['namespace' => 'Comment', 'prefix' => '{post}/comments'], function() {
         Route::post('/', [App\Http\Controllers\Post\Comment\StoreController::class, '__invoke'])->name('post.comment.store');
     });
+
+    Route::group(['namespace' => 'Like', 'prefix' => '{post}/likes'], function() {
+        Route::post('/', [App\Http\Controllers\Post\Like\StoreController::class, '__invoke'])->name('post.like.store');
+    });
 });
 
 Auth::routes(['verify' => true]);
