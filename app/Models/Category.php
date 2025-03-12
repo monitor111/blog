@@ -15,4 +15,10 @@ class Category extends Model
     protected $guarded = false;
 
     const DELETED_AT = 'deleted_at';
+
+
+    public function posts() 
+    {
+        return $this->hasMany(Post::class, 'category_id', 'id');
+    }
 }
