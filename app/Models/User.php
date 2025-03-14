@@ -3,18 +3,13 @@
 namespace App\Models;
 use App\Models\Post;
 
-
-// use Illuminate\Contracts\Auth\MustVerifyEmail;
-
-use App\Notifications\SendVerifyWithQueueNotification;
-use Illuminate\Contracts\Auth\MustVerifyEmail;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
-class User extends Authenticatable implements MustVerifyEmail
+class User extends Authenticatable
 {
     use HasApiTokens, HasFactory, Notifiable, SoftDeletes;
 
@@ -60,15 +55,9 @@ class User extends Authenticatable implements MustVerifyEmail
         'email_verified_at' => 'datetime',
     ];
 
-    public function sendEmailVerificationNotification()
-    {
-        $this->notify(new SendVerifyWithQueueNotification());
-    }
-
-
     /**
- * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
- */
+     * @return \Illuminate\Database\Eloquent\Relations\BelongsToMany
+     */
     public function likedPosts()
     {
         return $this->belongsToMany(Post::class, 'post_user_likes', 'user_id', 'post_id');
@@ -77,5 +66,4 @@ class User extends Authenticatable implements MustVerifyEmail
     public function comments() {
         return $this->hasMany(Comment::class, 'user_id', 'id');
     }
-
 }

@@ -11,9 +11,9 @@ use Illuminate\Support\Facades\Validator;
 class RegisterController extends Controller
 {
     /*
-    |--------------------------------------------------------------------------
+    |---------------------------------------------------------------------------
     | Register Controller
-    |--------------------------------------------------------------------------
+    |---------------------------------------------------------------------------
     |
     | This controller handles the registration of new users as well as their
     | validation and creation. By default this controller uses a trait to
@@ -67,6 +67,8 @@ class RegisterController extends Controller
             'name' => $data['name'],
             'email' => $data['email'],
             'password' => Hash::make($data['password']),
+            // Уберите подтверждение email
         ]);
     }
 }
+
