@@ -30,7 +30,7 @@
           <form action="{{ route('admin.post.update', $post->id) }}" method="POST" enctype="multipart/form-data">
             @csrf
             @method('PATCH')
-            <div class="form-group w-25">
+            <div class="form-group w-80">
               <input type="text" class="form-control" name="title" placeholder="Назва поста"
               value="{{ $post->title }}">
               @error('title')
@@ -46,7 +46,7 @@
               @enderror
             </div>
 
-            <div class="form-group w-50">
+            <div class="form-group w-80">
               <label for="exampleInputFile">Додати прев'ю</label>
               <div class="w-50 mb-2">
                 <img src="{{ url('storage/' . $post->preview_image) }}" alt="preview_image" class="w-50">
@@ -64,7 +64,7 @@
               <div class="text-danger">{{ $message }}</div>
               @enderror
             </div>
-            <div class="form-group w-50">
+            <div class="form-group w-80">
               <label for="exampleInputFile">Додати головне зображення</label>
               <div class="w-50 mb-2">
                 <img src="{{ url('storage/' . $post->main_image) }}" alt="main_image" class="w-50">

@@ -72,3 +72,10 @@ class UpdateController extends Controller
         return view('admin.post.show', compact('post'));
     }
 }
+
+
+
+
+
+Возможно это вход в БД на удаленном
+1lLpGJ730Xy5

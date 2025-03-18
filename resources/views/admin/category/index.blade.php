@@ -25,12 +25,12 @@
     <div class="container-fluid">
       <!-- Small boxes (Stat box) -->
       <div class="row">
-        <div class="col-3 mb-3">
+        <div class="col-12 col-md-3 mb-3">
           <a href="{{ route('admin.category.create') }}" class="btn btn-block btn-primary">Додати нову категорію</a>
         </div>
       </div>
       <div class="row">  
-        <div class="col-6">         
+        <div class="col-12">         
           <div class="card">
             <!-- /.card-header -->
             <div class="card-body table-responsive p-0">

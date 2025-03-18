@@ -34,7 +34,7 @@
       <!-- Small boxes (Stat box) -->
       <div class="row">
         <div class="col-12">
-          <form action="{{ route('admin.user.store') }}" method="POST" class="w-25">
+          <form action="{{ route('admin.user.store') }}" method="POST" class="w-50">
             @csrf
             <div class="form-group">
               <input type="text" class="form-control" name="name" placeholder="Ім'я користувача">
@@ -52,7 +52,7 @@
 
             
 
-            <div class="form-group w-50">
+            <div class="form-group w-70">
               <label>Виберіть роль</label>
               <select name="role" class="form-control">
                 @foreach ($roles as $id => $role)

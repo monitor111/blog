@@ -29,7 +29,7 @@
         <div class="col-12">
           <form action="{{ route('admin.post.store') }}" method="POST" enctype="multipart/form-data">
             @csrf
-            <div class="form-group w-25">
+            <div class="form-group w-80">
               <input type="text" class="form-control" name="title" placeholder="Назва поста"
               value="{{ old('title') }}">
               @error('title')
@@ -45,7 +45,7 @@
               @enderror
             </div>
 
-            <div class="form-group w-50">
+            <div class="form-group w-80">
               <label for="exampleInputFile">Додати прев'ю</label>
               <div class="input-group">
                 <div class="custom-file">
@@ -61,7 +61,7 @@
               <div class="text-danger">{{ $message }}</div>
               @enderror
             </div>
-            <div class="form-group w-50">
+            <div class="form-group w-80">
               <label for="exampleInputFile">Додати головне зображення</label>
               <div class="input-group">
                 <div class="custom-file">
