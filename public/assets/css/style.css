@@ -7954,3 +7954,21 @@ label {
   text-align: center; }
 
 /*# sourceMappingURL=style.css.map */
+
+
+
+
+
+body {
+  overflow-x: hidden;
+}
+
+.container {
+  max-width: 1200px; /* Или 960px, если раньше было меньше */
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  overflow: hidden;
+}
+
+
